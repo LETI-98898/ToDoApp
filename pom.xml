@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/3d206a49-3816-4758-9dc6-d40ea163ec07 -->
     <groupId>com.example</groupId>
-    <artifactId>ToDoApp</artifactId>
+    <artifactId>app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
@@ -53,13 +53,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!-- PDF Code Dependency Added-->
-        <dependency>
-            <groupId>com.github.librepdf</groupId>
-            <artifactId>openpdf</artifactId>
-            <version>1.3.30</version>
         </dependency>
         
         <!-- QR Code Dependency Added-->

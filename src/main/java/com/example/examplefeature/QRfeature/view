@@ -1,0 +1,33 @@
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Image;
+import src/main/java/com/example/examplefeature/QRfeature/Service
+import java.io.File;
+import java.io.IOException;
+
+
+Button qrButton = new Button("Gerar QR Code", event -> {
+    try {
+  
+        String taskJson = String.format("{\"id\":%d,\"title\":\"%s\",\"description\":\"%s\"}",
+                task.getId(), task.getTitle(), task.getDescription());
+
+    
+        String outputPath = "target/task-" + task.getId() + ".png";
+        File qrFile = QrCodeGenerator.generateQrToFile(taskJson, outputPath);
+
+      
+        Image qrImage = new Image(qrFile.toURI().toString(), "QR Code da tarefa");
+        qrImage.setWidth("200px");
+        qrImage.setHeight("200px");
+
+        add(qrImage);
+        Notification.show("QR Code gerado com sucesso!");
+    } catch (IOException e) {
+        e.printStackTrace();
+        Notification.show("Erro ao gerar QR Code: " + e.getMessage());
+    }
+});
+
+add(qrButton);

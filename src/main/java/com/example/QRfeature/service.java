@@ -8,7 +8,7 @@ import java.io.IOException;
 
 
 @Service
-public class QrCodeService {
+public class service {
 
     public File generateTaskQr(Long id, String title, String description) throws IOException {
         String json = String.format("{\"id\":%d,\"title\":\"%s\",\"description\":\"%s\"}", id, title, description);

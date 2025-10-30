@@ -5,11 +5,11 @@ import com.vaadin.flow.spring.annotation.UIScope;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.service.QrCodeService;
+import com.example.QRfeature.service
 import java.io.File;
 import java.io.IOException;
 
-@Route("tasks")
+@Route("service")
 @UIScope
 public class view extends VerticalLayout {
 

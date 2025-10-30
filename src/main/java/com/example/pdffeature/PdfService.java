@@ -1,4 +1,4 @@
-package pdffeature;
+package com.example.pdffeature;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;

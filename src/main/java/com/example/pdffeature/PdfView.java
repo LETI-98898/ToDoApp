@@ -1,16 +1,20 @@
-package pdffeature;
+package com.example.pdffeature;
 
 import com.example.base.ui.MainLayout;
 import com.example.base.ui.component.ViewToolbar;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.Menu;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.StreamResource;
 
 import java.io.ByteArrayInputStream;
 
-@Route(value = "pdf", layout = MainLayout.class)
+@Route(value = "pdf", layout = MainLayout.class) // Garante que usa o teu layout base
+@PageTitle("PDF Generator")
+@Menu(order = 1, icon = "vaadin:clipboard-check", title = "PDF Generator")
 public class PdfView extends VerticalLayout {
 
     private final PdfService pdfService = new PdfService();

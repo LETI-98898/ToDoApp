@@ -5,26 +5,25 @@ import com.vaadin.flow.spring.annotation.UIScope;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.example.examplefeature.service.QrCodeService;
+import com.example.service.QrCodeService;
 import java.io.File;
 import java.io.IOException;
 
 @Route("tasks")
 @UIScope
-public class Task extends VerticalLayout {
+public class view extends VerticalLayout {
 
     private final QrCodeService qrCodeService;
 
     @Autowired
-    public Task(QrCodeService qrCodeService) {
+    public view(QrCodeService qrCodeService) {
         this.qrCodeService = qrCodeService;
 
-        // Exemplo de tarefa (substituir pelos dados reais)
+       
         Long id = 1L;
         String title = "Comprar pão";
         String description = "Ir à padaria às 9h";
 
-        // Botão para gerar QR Code
         Button qrButton = new Button("Gerar QR Code", event -> {
             try {
                 File qrFile = qrCodeService.generateTaskQr(id, title, description);
